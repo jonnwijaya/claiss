@@ -1,24 +1,12 @@
 import type { Config } from 'tailwindcss'
-import forms from '@tailwindcss/forms'
-import typography from '@tailwindcss/typography'
-import aspectRatio from '@tailwindcss/aspect-ratio'
 
-const config = {
-  darkMode: "class",
+const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -55,21 +43,8 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: '65ch',
-          },
-        },
-      },
     },
   },
-  plugins: [forms, typography, aspectRatio],
-} satisfies Config
-
+  plugins: [],
+}
 export default config
